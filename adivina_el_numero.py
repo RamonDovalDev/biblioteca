@@ -1,3 +1,44 @@
+"""
+JUEGO: Adivina el Número - Modo Humillante
+============================================
+
+Reglas del juego:
+
+- El programa genera un número secreto aleatorio entre 1 y 100 (inclusive).
+- El jugador dispone de un máximo de 10 intentos para adivinar el número.
+- Después de cada intento, el juego indica si el número introducido es:
+    • Demasiado bajo  → "📈 Demasiado bajo. Intenta con un número más alto"
+    • Demasiado alto   → "📉 Demasiado alto. Intenta con un número más bajo"
+- Si el jugador acierta el número, aparece un mensaje de victoria mostrando 
+  en cuántos intentos lo consiguió.
+- Si se agotan los 10 intentos sin acertar, el jugador pierde y recibe 
+  un mensaje humillante aleatorio (muy sarcástico y ofensivo).
+- Al finalizar cada partida (ya sea victoria o derrota), se pregunta si 
+  se desea jugar otra vez.
+
+Interfaz:
+- Ventana principal de 800x600 píxeles con diseño limpio y centrado.
+- Campo de entrada grande para introducir el número.
+- Botón "¡Adivinar!" (también se puede pulsar Enter).
+- Etiqueta que muestra las pistas o el resultado.
+- Contador de intentos: "Intentos: X / 10"
+- Barra visual de progreso que cambia de color (verde → naranja → rojo) 
+  según los intentos restantes.
+- Botón "Nuevo Juego" para reiniciar en cualquier momento.
+- Uso de tkinter para la interfaz gráfica.
+
+Módulo:
+- Archivo: adivina_el_numero.py
+- Clase principal: NumberGuessingGame
+- Incluye mensajes humillantes predefinidos que se eligen aleatoriamente al perder.
+
+¡Que empiece la humillación!
+"""
+
+# ========================
+# Código del juego
+# ========================
+
 import tkinter as tk
 from tkinter import messagebox
 import random
@@ -149,3 +190,4 @@ class NumberGuessingGame:
 if __name__ == "__main__":
     game = NumberGuessingGame();
     game.run()
+
